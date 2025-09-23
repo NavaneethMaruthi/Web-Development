@@ -1,7 +1,7 @@
-# Personal Portfolio Website
+# Personal Homepage 
 
 ## 📌 Project Objective
-This project is a **personal portfolio website** built to showcase my skills, work experience, and featured projects.  
+This project is a **personal website** built to showcase my skills, work experience, and featured projects.  
 It demonstrates the use of **HTML, CSS, JavaScript (ES6 modules), and Bootstrap 5** to create a responsive, professional-looking homepage.  
 ---
 ## Author: Navaneeth Maruthi
