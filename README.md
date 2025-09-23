@@ -31,10 +31,12 @@ https://navaneethmaruthi.github.io/Web-Development/portfolio/
 4. http-server
 
 ---
-
+## Demo 
+[Demo Video](https://drive.google.com/file/d/1OGMoWnUpCLQMj_fM3f5ZGtUM7wYnkakb/view)
+---
 ## Gen Ai Used 
 I used Chatgpt 5 for my contact page. I asked the AI to " Write an HTML and CSS code for a 'Contact Me' section. The section should have a full-width blue header with the title 'Contact Me' and a subtitle line below it. Below the header, create a two-column layout:On the left, a 'Get in Touch' panel with email, GitHub, and LinkedIn links.On the right, a 'Send a Message' form with fields for Name, Email, and Message, plus a Send button.
 Make the layout responsive using Bootstrap 5"
-
+---
 ## License 
 MIT
