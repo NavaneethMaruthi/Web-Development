@@ -1,13 +1,14 @@
 let listingsData = [];
 
-function loadListings() {
+async function loadListings() {
   try {
-    listingsData = listings.slice(0, 50); // use global variable from .js file
+    const response = await fetch("./airbnb_sf_listings_500.json");
+    const data = await response.json();
+    listingsData = data.slice(0, 50); // first 50
     displayListings(listingsData);
   } catch (err) {
     console.error("Error loading listings:", err);
   }
-}
 }
 
 function displayListings(listings) {

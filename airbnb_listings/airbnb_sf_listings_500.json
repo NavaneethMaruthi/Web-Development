@@ -1,4 +1,4 @@
-const listings = [
+[
     {
         "id": 958,
         "listing_url": "https://www.airbnb.com/rooms/958",
@@ -40270,4 +40270,4 @@ const listings = [
         "calculated_host_listings_count_shared_rooms": 0,
         "reviews_per_month": 0.35
     }
-];
+]
