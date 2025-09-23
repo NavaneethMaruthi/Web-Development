@@ -10,6 +10,9 @@ Class: CS5610 Class Link: https://johnguerra.co/classes/webDevelopment_online_fa
 ## Homepage
 https://navaneethmaruthi.github.io/Web-Development/portfolio/
 
+## Desgin Document 
+[Desgin Document (PDF)](portfolio/DesginDocument.pdf)
+
 ## 🖼️ Screenshot
 ![Homepage Screenshot](portfolio/images/Homepage.jpg)  
 
