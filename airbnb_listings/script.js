@@ -34,10 +34,4 @@ function displayListings(listings) {
   });
 }
 
-// Sort by price
-document.getElementById("sortPrice").addEventListener("click", () => {
-  const sorted = [...listingsData].sort((a, b) => (a.price || 0) - (b.price || 0));
-  displayListings(sorted);
-});
-
 loadListings();
