@@ -1,8 +1,3 @@
-/* =============================================
-   ENHANCED PORTFOLIO CSS
-   Modern, professional styling with proper specificity
-   Bootstrap is loaded first, this file second
-   ============================================= */
 
 /* === ROOT VARIABLES === */
 :root {
@@ -284,43 +279,95 @@ section#experience.mb-5 {
 }
 
 /* === PROJECTS PAGE === */
-main.container.py-5 > h1.mb-4 {
+main.container.py-5 > h1.mb-5.text-center {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-main.container.py-5 > div.mb-5 {
+main.container.py-5 > h1.mb-5.text-center::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+/* Project Cards */
+.card.project-card {
   background: var(--bg-white);
   border-radius: 15px;
-  padding: 2rem;
-  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   transition: var(--transition-normal);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  height: 100%;
 }
 
-main.container.py-5 > div.mb-5:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+.card.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-main.container.py-5 > div.mb-5 h3 {
+.card.project-card .project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.card.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.card.project-card .card-title {
   color: var(--primary-color);
   font-weight: 700;
-  margin-bottom: 1rem;
   font-size: 1.6rem;
-}
-
-main.container.py-5 > div.mb-5 p.text-muted {
-  font-size: 1.05rem;
   margin-bottom: 1rem;
-  font-style: italic;
 }
 
-main.container.py-5 > div.mb-5 ul li {
-  margin-bottom: 0.7rem;
-  line-height: 1.7;
+.card.project-card .card-text.text-muted {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.card.project-card ul.list-unstyled li {
+  padding: 0.4rem 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.card.project-card ul.list-unstyled li strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Coming Soon Card */
+.row.mt-5 .card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border: 2px dashed rgba(0, 102, 204, 0.3);
+  border-radius: 15px;
+}
+
+.row.mt-5 .card h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.row.mt-5 .card p.text-muted {
+  color: var(--text-light);
+  font-size: 1.05rem;
 }
 
 /* === BUTTONS === */
@@ -360,6 +407,400 @@ main.container.py-5 > div.mb-5 ul li {
 .btn.btn-sm {
   padding: 0.5rem 1.2rem;
   font-size: 0.95rem;
+}
+
+/* === EXPERIENCE PAGE === */
+
+.experience-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Experience Card */
+.experience-card {
+  background: var(--bg-white);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+/* Experience Header */
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--bg-light);
+}
+
+.company-logo-wrapper {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.experience-card:hover .company-logo-wrapper {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.company-logo {
+  max-width: 200px;
+  max-height: 80px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.experience-title-section {
+  width: 100%;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.experience-duration,
+.experience-location {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-duration svg,
+.experience-location svg {
+  color: var(--primary-color);
+}
+
+/* Experience Content */
+.experience-content h5 {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.experience-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.experience-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.experience-list li svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.experience-list li strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Technologies Used Section */
+.technologies-used h6 {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Responsive Design for Experience Page */
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 1.5rem;
+  }
+  
+  .company-logo {
+    max-width: 150px;
+    max-height: 60px;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+  }
+  
+  .job-title {
+    font-size: 1.1rem;
+  }
+  
+  .experience-duration,
+  .experience-location {
+    font-size: 0.9rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .experience-duration svg,
+  .experience-location svg {
+    margin-bottom: 0.3rem;
+  }
+  
+  .experience-list li {
+    font-size: 0.95rem;
+  }
+  
+  .tech-tags {
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* === SKILLS PAGE === */
+
+/* Section Icons */
+section h2 svg {
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+
+/* Skill Cards - Large (Programming Languages) */
+.skill-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: var(--transition-normal);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.skill-card .skill-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: var(--transition-normal);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.skill-card h5 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+/* Skill Cards - Small (Web & Database) */
+.skill-card-small {
+  background: var(--bg-white);
+  border-radius: 10px;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  transition: var(--transition-normal);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.skill-card-small:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+
+.skill-card-small .skill-icon-small {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0 auto 0.8rem;
+  border-radius: 8px;
+  transition: var(--transition-normal);
+}
+
+.skill-card-small:hover .skill-icon-small {
+  transform: scale(1.15);
+}
+
+.skill-card-small p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Tool Badges */
+.tool-badge {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: var(--transition-normal);
+  margin-bottom: 1rem;
+}
+
+.tool-badge:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.tool-badge-alt {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--accent-color);
+  transition: var(--transition-normal);
+  margin-bottom: 1rem;
+}
+
+.tool-badge-alt:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Interests Grid */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.interest-item {
+  background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: var(--transition-normal);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  border-color: var(--primary-color);
+}
+
+.interest-item svg {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  transition: var(--transition-normal);
+}
+
+.interest-item:hover svg {
+  color: white;
+  transform: scale(1.2);
+}
+
+.interest-item p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: var(--transition-fast);
+}
+
+.interest-item:hover p {
+  color: white;
+}
+
+/* Responsive adjustments for skills page */
+@media (max-width: 768px) {
+  .skill-card .skill-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .skill-card h5 {
+    font-size: 1rem;
+  }
+  
+  .interests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .interest-item {
+    padding: 1.5rem 1rem;
+  }
 }
 
 /* === CONTACT PAGE - HERO === */
